@@ -4,7 +4,7 @@ This end-to-end project focuses on **analyzing and predicting customer churn** f
 
 ---
 
-## 📁 Table of Contents
+## Table of Contents
 - [Project Overview](#project-overview)
 - [Data Source](#data-source)
 - [Tools & Tech Stack](#tools--tech-stack)
