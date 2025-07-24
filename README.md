@@ -79,7 +79,7 @@ Performed EDA in Python to answer key business questions:
 
 This dashboard visualizes key churn metrics across customer segments including gender, age group, contract type, tenure, payment method, and more.
 
-![Churn Summary Dashboard](assets/churn-summary-dashboard.png)
+![Churn Summary Dashboard](dashboards/images/churn-analysis-summary.png)
 
 ---
 
