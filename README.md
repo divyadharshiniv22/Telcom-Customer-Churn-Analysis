@@ -16,7 +16,6 @@ This end-to-end project focuses on **analyzing and predicting customer churn** f
 - [Recommendations](#recommendations)
 - [Limitations](#limitations)
 - [References](#references)
-
 ---
 
 ## 📝 Project Overview
