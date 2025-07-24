@@ -87,7 +87,7 @@ This dashboard visualizes key churn metrics across customer segments including g
 
 This dashboard highlights predicted churners by risk category, state, tenure, payment type, and contract, helping the business proactively retain customers.
 
-![Churn Prediction Dashboard](assets/churn-prediction-dashboard.png)
+![Churn Prediction Dashboard](dashboards/images/churn-analysis-prediction.png)
 
 ---
 
