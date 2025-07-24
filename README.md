@@ -1,111 +1,155 @@
-# Telecom Customer Churn Analysis
+# 📊 Telecom Customer Churn Analysis | Power BI + SQL + Machine Learning
 
-## Table of Contents
+This end-to-end project focuses on **analyzing and predicting customer churn** for a telecom company using **Power BI, SQL Server, and Python**. The goal is to identify customers at risk of leaving and support proactive retention strategies.
 
-   [Project Overview](#project-overview)
+---
 
-   [Data Source](#data-sources)
-   
-   [Recommendations](#recommendations)
+## 📁 Table of Contents
+- [Project Overview](#project-overview)
+- [Data Source](#data-source)
+- [Tools & Tech Stack](#tools--tech-stack)
+- [ETL & Data Preparation](#etl--data-preparation)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Power BI Dashboards](#power-bi-dashboards)
+- [Machine Learning Model](#machine-learning-model)
+- [Key Findings](#key-findings)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [References](#references)
 
-### Project Overview
+---
 
-This data analysis project aims to provide insights into customer churn behavior in a telecom company. By analyzing various aspects of customer and usage data, we aim to identify churn trends, build predictive models, and gain a deeper understanding of customer retention challenges.
+## 📝 Project Overview
 
-### Data Sources
+Developed a machine learning model to predict customer churn for a telecom company, enabling data-driven customer retention efforts. The project involved:
 
-Customer Data: The primary dataset used for this analysis is the "Customer_Data.xls" file, containing detailed information about customer demographics, service usage, billing, contract types, and churn labels.
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- SQL-based ETL
+- Building predictive models in Python
+- Visualizing insights and predictions in Power BI
 
-### Tools
+---
 
-- SQL Server [Download here](https://microsoft.com)
-- Power BI  
-- Python (Jupyter Notebook – pandas, scikit-learn, seaborn)  
+## 📂 Data Source
 
-### Key Project Components
+- **Filename:** `Customer_Data.xls`
+- **Details:** Contains customer demographics, service subscriptions, billing details, contract types, and churn labels.
 
-1. **ETL Process in SQL Server**  
-   Extracted raw data from multiple tables and performed data transformations using SQL joins and views. The cleaned, structured data was loaded into a central reporting table for analysis.
+---
 
-2. **Data Cleaning in SQL Server**  
-   Handled missing values, duplicates, and inconsistent formats using SQL queries. Created calculated fields and applied business rules to enhance data quality.
+## 🛠️ Tools & Tech Stack
 
-3. **Power BI Transformations**  
-   Used Power Query to filter, reshape, and enhance data. Built relationships and created new columns and measures to support dashboarding.
+- **SQL Server** – ETL and transformation logic
+- **Power BI** – Dashboard creation and data visualization
+- **Python (Jupyter Notebook)** – Machine learning model development using:
+  - `pandas`
+  - `seaborn`
+  - `scikit-learn`
 
-4. **Power BI Visualization & Enhancing Visuals**  
-   Designed an interactive Power BI dashboard with KPIs, charts, slicers, and drill-down features. Visualized churn rates by segment, tenure, contract type, and monthly trends.
+---
 
-5. **Build Machine Learning Model – Random Forest in Jupyter Notebook**  
-   Conducted exploratory data analysis (EDA) and feature engineering in Python. Trained a Random Forest classifier to predict customer churn with ~85% accuracy using key behavioral features.
+## 🔄 ETL & Data Preparation
 
-6. **Visualize Predicted Data in Power BI – Predicted Churner Profile**  
-   Imported model predictions into Power BI to identify high-risk customers. Built visuals to compare predicted churners vs. loyal customers by key characteristics, enabling strategic retention efforts.
+### In SQL Server:
+- Joined and transformed raw tables
+- Cleaned data (missing values, duplicates, inconsistent formats)
+- Applied business rules to enhance reliability
+- Loaded processed data into reporting-ready views
 
-### Data Cleaning/Preparation
+### In Power BI:
+- Used Power Query for final data shaping
+- Created calculated columns and DAX measures for visual analytics
 
-In the initial data preparation phase, we performed the following tasks:  
-1. Data loading and inspection.  
-2. Handling missing values.  
-3. Data cleaning and formatting.
+---
 
-### Exploratory Data Analysis
+## 🔍 Exploratory Data Analysis (EDA)
 
-EDA involved exploring the telecom customer data to answer key questions, such as:  
+Performed EDA in Python to answer key business questions:
 
-- What is the overall churn rate trend?  
-- Which customer segments have the highest churn rates?  
-- What are the key factors influencing customer churn?
+- Which customers are most likely to churn?
+- What impact do contract types, internet service, and tenure have on churn?
+- How do payment methods influence churn behavior?
 
-## Power BI Dashboard
+---
 
-- Created an interactive Power BI dashboard to visualize telecom churn insights.
-- Dashboard features include:
-  - Churn rate trends over time.
-  - Customer segmentation by demographics and contract type.
-  - Key metrics such as Monthly Charges, Tenure, and Customer Lifetime Value (LTV).
-  - Dynamic slicers and filters for exploring high-risk churn groups.
-- The dashboard helps stakeholders quickly identify churn drivers and monitor retention efforts.
+## 📊 Power BI Dashboards
 
-## Machine Learning Model
+### ✅ Churn Summary Dashboard
 
-- Built a Random Forest classifier in Python (Jupyter Notebook) to predict customer churn.
-- Key steps involved:
-  - Data preprocessing and feature engineering based on cleaned telecom data.
-  - Splitting data into training and testing sets.
-  - Training and hyperparameter tuning of the Random Forest model.
-  - Model evaluation using accuracy, precision, recall, and ROC-AUC metrics.
-- Achieved ~85% accuracy and 0.90 ROC-AUC, indicating strong predictive power.
-- Exported predicted churn probabilities for visualization and further analysis in Power BI.
+This dashboard visualizes key churn metrics across customer segments including gender, age group, contract type, tenure, payment method, and more.
 
-  ## Results / Findings
+![Churn Summary Dashboard](assets/churn-summary-dashboard.png)
 
-- The overall churn rate was highest among customers with month-to-month contracts (~35%).  
-- Customers with longer contract durations showed significantly lower churn rates.  
-- Higher monthly charges and shorter customer tenure were strongly associated with increased churn risk.  
-- The Random Forest machine learning model achieved an accuracy of approximately 85%, with an ROC-AUC score of 0.90, demonstrating strong ability to predict churn.  
-- The Power BI dashboards provided clear visual insights into churn patterns, helping stakeholders identify at-risk customer segments.  
-- Customers predicted to churn with high probability should be prioritized for targeted retention campaigns and personalized marketing efforts.
+---
 
-  ### Recommendations
+### 🤖 Prediction Dashboard
 
-Based on the analysis, we recommend the following actions:  
-- Invest in targeted retention campaigns focusing on high-risk churn customers to reduce churn rates.  
-- Promote longer-term contract plans to improve customer loyalty and reduce month-to-month churn.  
-- Implement personalized offers and loyalty programs for customers with high Monthly Charges and low tenure.  
-- Use customer segmentation insights to tailor marketing strategies for different demographic groups.
+This dashboard highlights predicted churners by risk category, state, tenure, payment type, and contract, helping the business proactively retain customers.
 
-### Limitations
+![Churn Prediction Dashboard](assets/churn-prediction-dashboard.png)
 
-Certain limitations impacted the analysis:  
-- Some missing or inconsistent customer data had to be imputed or removed, which might affect the model accuracy.  
-- Outliers in monthly charges and tenure could skew the predictions despite preprocessing efforts.  
-- External factors like market competition or seasonal trends were not included in the dataset.  
-- The model may require periodic retraining as customer behavior and telecom offerings evolve.
+---
 
-### References
+## 🤖 Machine Learning Model
 
-1. SQL for Businesses by werty.  
-2. [Stack Overflow](https://stackoverflow.com) – for coding and query troubleshooting.  
-3. Scikit-learn documentation – for machine learning model implementation.  
-4. Power BI official documentation – for dashboard creation and transformations.
+- Built a **Random Forest Classifier** in Python
+- Process:
+  - Data cleaning & encoding
+  - Feature selection & engineering
+  - Train-test split
+  - Hyperparameter tuning
+
+### 🧪 Model Metrics:
+- **Accuracy:** ~85%
+- **ROC-AUC:** 0.90
+
+Predicted high-risk churners were exported and visualized in Power BI.
+
+---
+
+## 📌 Key Findings
+
+- **Overall churn rate:** 27%
+- Highest churn observed in:
+  - **Month-to-month** contracts (46.5%)
+  - **Fiber Optic** users (41.1%)
+  - **Mailed Check** payment method (37.8%)
+- Customers with **> 24 months tenure** had much lower churn
+- Short-tenure customers and those with **high monthly charges** are more likely to churn
+
+---
+
+## ✅ Recommendations
+
+- Target **month-to-month** users with loyalty offers
+- Promote **annual or two-year** contracts to increase retention
+- Offer personalized discounts to customers with **high monthly charges**
+- Focus on customers in **early tenure stages** for onboarding and engagement
+- Use model predictions to build **automated churn prevention workflows**
+
+---
+
+## ⚠️ Limitations
+
+- Missing or imputed values may slightly reduce model accuracy
+- External market trends (e.g. competition) not included in data
+- Model performance may decline over time without retraining
+- Outliers in billing and tenure metrics require ongoing monitoring
+
+---
+
+## 📚 References
+
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [Power BI Docs](https://learn.microsoft.com/en-us/power-bi/)
+- [SQL Server Docs](https://learn.microsoft.com/en-us/sql/)
+- Stack Overflow – Troubleshooting and best practices
+
+---
+
+## 🔗 GitHub Repository
+
+> 📌 [Project Link](https://github.com/divyadharshiniv22/Telcom-Customer-Churn-Analysis/tree/feature/v1)
+
+
